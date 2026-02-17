@@ -2,6 +2,14 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Packages and Tools
+.git controlled
+typescript
+Next, so React frontend, routes based on folder structure
+tailwindcss
+eslint with prettier
+jest testing framework
+
 ## Getting Started
 
 First, run the development server:
