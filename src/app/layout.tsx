@@ -48,6 +48,9 @@ export default function RootLayout({
 					</nav>
 				</header>
 				{children}
+				<footer style={{ marginTop: "2rem", padding: "1rem 0", textAlign: "center", background: "#f5f5f5" }}>
+					&copy; {new Date().getFullYear()} Fermented With Love. All rights reserved.
+				</footer>
 			</body>
 		</html>
 	);
