@@ -40,7 +40,7 @@ export default function RootLayout({
               </Link>
             </div>
             <ul className="flex space-x-6 text-base font-medium">
-              <li><Link href="/" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link></li>
+              {/* <li><Link href="/" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link></li> */}
               <li><Link href="/kefir-care" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Kefir Care</Link></li>
               <li><Link href="/about" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</Link></li>
             </ul>

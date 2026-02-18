@@ -8,6 +8,13 @@ export default function Page() {
 						<h2 className="font-bold text-xl" id="feeding-instructions">Daily Feeding Instructions</h2>
 						<p>Milk kefir grains require fresh milk daily to remain healthy.</p>
 						
+						<h3 className="font-bold mt-2">Equipment Needed</h3>
+						<ul>
+							<li>glass jars, 12-16ounces</li>
+							<li>plastic wrap, cheesecloth, or other type of lid</li>
+							<li>fine mesh strainer, plastic or stainless steel</li>
+						</ul>
+
 						<h3 className="font-bold mt-2">Basic Feeding Ratio</h3>
 						<ul>
 							<li>1 tablespoon kefir grains</li>
