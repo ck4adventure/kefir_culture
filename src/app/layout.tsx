@@ -29,28 +29,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<header className="w-full bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 shadow-sm">
-					<nav className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
-						<div className="flex items-center">
-							<Link href="/" className="flex items-center" aria-label="Go to homepage">
-								<div className="w-10 h-10 bg-zinc-300 dark:bg-zinc-700 rounded-full flex items-center justify-center mr-3" aria-label="Logo placeholder">
-									<span className="text-lg font-bold text-zinc-600 dark:text-zinc-200">Logo</span>
-								</div>
-								<span className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">Fermented With Love</span>
-							</Link>
-						</div>
-						<ul className="flex space-x-6 text-base font-medium">
-							{/* <li><Link href="/" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link></li> */}
-							<li><Link href="/about" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">What is Kefir</Link></li>
-							<li><Link href="/kefir-care" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Kefir Care</Link></li>
-							<li><Link href="/storing-kefir" className="text-zinc-700 dark:text-zinc-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Storing Kefir</Link></li>
-						</ul>
-					</nav>
-				</header>
 				{children}
-				<footer style={{ marginTop: "2rem", padding: "1rem 0", textAlign: "center", background: "#f5f5f5" }}>
-					&copy; {new Date().getFullYear()} Fermented With Love. All rights reserved.
-				</footer>
 			</body>
 		</html>
 	);
