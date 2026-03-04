@@ -1,4 +1,5 @@
 import { cloneElement } from "react";
+import { COLORS } from "@/lib/colors";
 
 /* ══════════════════════════════════════════
    MILK GLASS LOGO v2
@@ -6,7 +7,7 @@ import { cloneElement } from "react";
    — Fill opacity nudged up to feel milky-white
    — Outline style, works on any background
 ═══════════════════════════════════════════ */
-export function MilkGlass({ size = 80, color = "#4A7C59", bg = "transparent" }) {
+export function MilkGlass({ size = 80, color = COLORS.moss, bg = "transparent" }) {
   const w = size, h = size;
   const cx = w / 2;
 

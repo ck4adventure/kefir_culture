@@ -1,7 +1,8 @@
 'use client';
 
 import './globals.css';
-import {MilkGlass} from './logo/page'
+import { COLORS } from '@/lib/colors';
+import { MilkGlass } from '../../design/logo/page';
 
 /* ============================================================
    FERMENTED WITH LOVE — Landing Page (Next.js)
@@ -72,7 +73,7 @@ export default function LandingPage() {
       <nav className="nav">
         <div className="nav-inner">
           <a href="/" className="nav-logo">
-            <MilkGlass size={48} color="#4A7C59" />
+            <MilkGlass size={48} color={COLORS.moss} />
             Fermented<em>WithLove</em>
           </a>
           <ul className="nav-links">
@@ -289,7 +290,7 @@ export default function LandingPage() {
           <div className="footer-inner">
             <div>
               <div className="footer-logo">
-                <MilkGlass size={48} color="#4A7C59" />
+                <MilkGlass size={48} color={COLORS.moss} />
                 Fermented<em>WithLove</em>
               </div>
               <p className="footer-tagline">A small guide to making kefir, sourdough & ferments at home.</p>
