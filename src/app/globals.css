@@ -818,6 +818,250 @@ a {
   border-top: 1px solid var(--chalk);
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumbs-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--moss);
+  transition: color 150ms;
+}
+
+.breadcrumbs-link:hover {
+  color: var(--fjord);
+}
+
+.breadcrumbs-sep {
+  color: var(--pebble);
+  font-size: 0.8rem;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--chalk);
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--milk-deep);
+  text-decoration: none;
+  transition: all 200ms;
+}
+
+.nav-button:hover {
+  background: var(--chalk);
+  transform: translateX(4px);
+}
+
+.nav-button-next:hover {
+  transform: translateX(-4px);
+}
+
+.nav-button-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pebble);
+}
+
+.nav-button-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Guide Sections */
+.guide-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--chalk);
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 200ms;
+}
+
+.guide-card:hover {
+  box-shadow: 0 8px 24px rgba(74, 124, 89, 0.10);
+  transform: translateY(-4px);
+  border-color: var(--moss);
+}
+
+.guide-card-icon {
+  font-size: 2.5rem;
+}
+
+.guide-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.guide-card-desc {
+  font-size: 0.9rem;
+  color: var(--stone);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.guide-card-link {
+  margin-top: auto;
+  font-weight: 500;
+  color: var(--moss);
+  transition: color 150ms;
+}
+
+.guide-card:hover .guide-card-link {
+  color: var(--fjord);
+}
+
+/* Benefits List */
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--milk-deep);
+  border-radius: 12px;
+  border-left: 4px solid var(--moss);
+}
+
+.benefit-icon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.benefit-item strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.benefit-item p {
+  font-size: 0.9rem;
+  color: var(--stone);
+  margin: 0;
+}
+
+/* Troubleshooting List */
+.troubleshooting-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.troubleshooting-item {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--chalk);
+  border-radius: 12px;
+  border-left: 4px solid var(--fjord);
+}
+
+.troubleshooting-item h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.8rem 0;
+}
+
+.troubleshooting-item ul {
+  padding-left: 1.5rem;
+  color: var(--stone);
+  line-height: 1.8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.troubleshooting-item li {
+  margin-bottom: 0.5rem;
+}
+
+/* Serving Ideas */
+.serving-ideas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.serving-idea {
+  padding: 1.5rem;
+  background: var(--milk-deep);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.serving-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.serving-idea h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.5rem 0;
+}
+
+.serving-idea p {
+  font-size: 0.85rem;
+  color: var(--stone);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-grid,
