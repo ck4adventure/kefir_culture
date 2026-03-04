@@ -5,37 +5,15 @@ import { COLORS } from '@/lib/colors';
 import { MilkGlass } from '../../design/logo/page';
 import Link from 'next/link';
 
+
 /* ============================================================
    FERMENTED WITH LOVE — Landing Page (Next.js)
    ============================================================ */
 
 /* ── Component ──────────────────────────────────────────────── */
-
-/* ── Component ──────────────────────────────────────────────── */
 export default function LandingPage() {
   return (
     <>
-
-      {/* NAV */}
-      <nav className="nav">
-        <div className="nav-inner">
-          <a href="/" className="nav-logo">
-            <MilkGlass size={48} color={COLORS.moss} />
-            Fermented<em>WithLove</em>
-          </a>
-          <ul className="nav-links">
-            {[
-              { label: "Kefir Guide", href: "/kefir" },
-              { label: "Sourdough", href: "/sourdough" },
-              { label: "Fermented Drinks", href: "/ciders" },
-            ].map(l => (
-              <li key={l.label}><Link href={l.href}>{l.label}</Link></li>
-            ))}
-          </ul>
-          <Link href="/kefir" className="btn btn-moss btn-sm">Get Started</Link>
-        </div>
-      </nav>
-
       {/* HERO */}
       <section className="hero">
         <div className="container">

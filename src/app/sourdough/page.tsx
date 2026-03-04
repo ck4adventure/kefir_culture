@@ -5,18 +5,6 @@ import '../globals.css';
 export default function SourdoughPage() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav">
-        <div className="nav-inner">
-          <a href="/" className="nav-logo">
-            🥖 Fermented<em>WithLove</em>
-          </a>
-          <ul className="nav-links">
-            <li><a href="/">← Back to Home</a></li>
-          </ul>
-        </div>
-      </nav>
-
       {/* HERO */}
       <section className="hero">
         <div className="container">
