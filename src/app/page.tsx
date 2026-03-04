@@ -1,45 +1,83 @@
+'use client';
+
 import './globals.css';
+import {MilkGlass} from './logo/page'
 
-const equipment = [
-  { name: "Glass jar (1 qt)", desc: "Wide-mouth mason jars are ideal. Avoid metal — the acidity can react.", icon: "🫙" },
-  { name: "Kefir grains", desc: "The living starter culture. Get them from a local sharer or online.", icon: "🌿" },
-  { name: "Whole milk", desc: "Full-fat gives the creamiest result. Raw or pasteurised both work.", icon: "🥛" },
-  { name: "Breathable cover", desc: "A square of muslin or cheesecloth secured with a rubber band.", icon: "🧴" },
-  { name: "Plastic strainer", desc: "To separate grains from finished kefir — never metal.", icon: "🔩" },
-  { name: "Wooden spoon", desc: "For stirring. Again, avoid metal contact with grains.", icon: "🥄" },
+/* ============================================================
+   FERMENTED WITH LOVE — Landing Page (Next.js)
+   ============================================================ */
+
+/* ── Data ───────────────────────────────────────────────────── */
+interface Equipment {
+  name: string;
+  desc: string;
+  icon: string;
+}
+
+interface Step {
+  title: string;
+  desc: string;
+}
+
+interface Tip {
+  label: string;
+  text: string;
+}
+
+interface StorageCard {
+  icon: string;
+  title: string;
+  body: string;
+  tag: string;
+  tagStyle: string;
+  cardStyle: string;
+}
+
+const equipment: Equipment[] = [
+  { name: "Glass jar (1 qt)",   desc: "Wide-mouth mason jars are ideal. Avoid metal — acidity can react.", icon: "🫙" },
+  { name: "Kefir grains",       desc: "The living starter culture. Source from a local sharer or online.", icon: "🌿" },
+  { name: "Whole milk",         desc: "Full-fat gives the creamiest result. Raw or pasteurised both work.", icon: "🥛" },
+  { name: "Breathable cover",   desc: "A square of muslin or cheesecloth secured with a rubber band.", icon: "🧴" },
+  { name: "Plastic strainer",   desc: "To separate grains from finished kefir — never metal.", icon: "🔩" },
+  { name: "Wooden spoon",       desc: "For stirring. Again, avoid metal contact with the grains.", icon: "🥄" },
 ];
 
-const careSteps = [
-  { title: "Ratio", desc: "Start with 1–2 tbsp of grains per 2 cups of milk. Adjust as your grains multiply." },
-  { title: "Temperature", desc: "Leave at room temperature — ideally 68–75°F (20–24°C). Warmer ferments faster." },
-  { title: "Time", desc: "12–24 hours is typical. Taste after 12h; tangy and slightly thick means it's ready." },
-  { title: "Straining", desc: "Pour through a plastic strainer into a clean jar. The grains left behind are ready to reuse immediately." },
-  { title: "Resting your grains", desc: "Taking a break? Cover grains in fresh milk and refrigerate. Change the milk every 1–2 weeks." },
+const careSteps: Step[] = [
+  { title: "Ratio",    desc: "Start with 1–2 tbsp of grains per 2 cups of milk. Adjust as your grains multiply." },
+  { title: "Temperature", desc: "Leave at room temp — ideally 68–75°F (20–24°C). Warmer ferments faster." },
+  { title: "Time",     desc: "12–24 hours is typical. Taste after 12h; tangy and slightly thick means ready." },
+  { title: "Straining", desc: "Pour through a plastic strainer into a clean jar. Grains are ready to reuse immediately." },
+  { title: "Resting",  desc: "Taking a break? Cover grains in fresh milk and refrigerate. Change milk every 1–2 weeks." },
 ];
 
-const tips = [
+const tips: Tip[] = [
   { label: "Temperature tip", text: "A slightly warm oven with just the light on is a perfect fermentation environment in winter." },
-  { label: "Grain health", text: "Healthy grains are white/cream, cauliflower-shaped, and smell pleasantly sour. Pink or slimy = discard." },
-  { label: "Second ferment", text: "After straining, bottle the kefir and leave 4–6h at room temp for a fizzy, more complex flavour." },
+  { label: "Grain health",    text: "Healthy grains are white/cream, cauliflower-shaped, and smell pleasantly sour. Pink or slimy = discard." },
+  { label: "Second ferment",  text: "After straining, bottle the kefir and leave 4–6h at room temp for a fizzy, more complex flavour." },
 ];
 
-const storageCards = [
+const storageCards: StorageCard[] = [
   { icon: "❄️", title: "Refrigerate finished kefir", body: "Strained kefir keeps for up to 2–3 weeks in a sealed jar in the fridge. Flavour deepens over time.", tag: "Up to 3 weeks", tagStyle: "tag-green", cardStyle: "green" },
-  { icon: "🥛", title: "How to drink it", body: "Plain over ice, blended into smoothies, poured over granola, or used as a buttermilk substitute in baking.", tag: "Versatile", tagStyle: "tag-blue", cardStyle: "blue" },
-  { icon: "🫙", title: "Resting your grains", body: "Submerge grains in fresh milk, seal, and refrigerate. Change milk every 1–2 weeks. They'll keep indefinitely.", tag: "Indefinite storage", tagStyle: "tag-green", cardStyle: "" },
-  { icon: "🌡️", title: "Serving temperature", body: "Straight from the fridge is most refreshing. Room temperature brings out more of the yeasty complexity.", tag: "2–6°C ideal", tagStyle: "tag-blue", cardStyle: "" },
+  { icon: "🥛", title: "How to drink it",            body: "Plain over ice, blended into smoothies, poured over granola, or used as a buttermilk substitute in baking.", tag: "Versatile", tagStyle: "tag-blue", cardStyle: "blue" },
+  { icon: "🫙", title: "Resting your grains",        body: "Submerge grains in fresh milk, seal, and refrigerate. Change milk every 1–2 weeks. They'll keep indefinitely.", tag: "Indefinite", tagStyle: "tag-green", cardStyle: "" },
+  { icon: "🌡️", title: "Serving temperature",       body: "Straight from the fridge is most refreshing. Room temperature brings out more yeasty complexity.", tag: "2–6°C ideal", tagStyle: "tag-blue", cardStyle: "" },
 ];
 
+/* ── Component ──────────────────────────────────────────────── */
 export default function LandingPage() {
   return (
     <>
+
       {/* NAV */}
       <nav className="nav">
         <div className="nav-inner">
-          <span className="nav-logo">Fermented<em>WithLove</em></span>
+          <a href="/" className="nav-logo">
+            <MilkGlass size={48} color="#4A7C59" />
+            Fermented<em>WithLove</em>
+          </a>
           <ul className="nav-links">
             {["What is Kefir", "Equipment", "Care Guide", "Storage"].map(l => (
-              <li key={l}><a href={`#${l.toLowerCase().replace(/ /g,"-")}`}>{l}</a></li>
+              <li key={l}><a href={`#${l.toLowerCase().replace(/ /g, "-")}`}>{l}</a></li>
             ))}
           </ul>
           <a href="#care-guide" className="btn btn-moss btn-sm">Get Started</a>
@@ -61,13 +99,13 @@ export default function LandingPage() {
               </p>
               <div className="hero-actions">
                 <a href="#what-is-kefir" className="btn btn-moss btn-lg">Learn the Basics</a>
-                <a href="#care-guide" className="btn btn-outline btn-lg">Care Guide →</a>
+                <a href="#care-guide"    className="btn btn-outline btn-lg">Care Guide →</a>
               </div>
               <div className="hero-stats">
                 {[
                   { val: "24h", label: "Typical ferment time" },
                   { val: "30+", label: "Probiotic strains" },
-                  { val: "∞", label: "Reusable grains" },
+                  { val: "∞",  label: "Reusable grains" },
                 ].map(s => (
                   <div key={s.label}>
                     <div className="stat-val">{s.val}</div>
@@ -77,7 +115,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Illustrated product shot */}
+            {/* Hero illustration — swap contents for <Image> */}
             <div className="hero-img">
               <div className="kefir-scene">
                 <div className="kefir-lid" />
@@ -90,9 +128,9 @@ export default function LandingPage() {
                     <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.55rem", letterSpacing: "0.08em", color: "var(--moss)", textTransform: "uppercase" }}>milk kefir</span>
                   </div>
                 </div>
-                <div className="kefir-spoon" style={{ display: "flex", alignItems: "center", marginTop: "0.75rem", transform: "rotate(-25deg)" }}>
-                  <div className="spoon-handle" />
-                  <div className="spoon-head" />
+                <div style={{ display: "flex", alignItems: "center", marginTop: "0.75rem", transform: "rotate(-25deg)" }}>
+                  <div style={{ width: 60, height: 5, background: "rgba(255,255,255,0.9)", border: "1px solid var(--chalk)", borderRadius: 9999 }} />
+                  <div style={{ width: 28, height: 18, background: "rgba(255,255,255,0.9)", border: "1.5px solid var(--chalk)", borderRadius: "50%", marginTop: -3, boxShadow: "0 2px 6px rgba(0,0,0,0.08)" }} />
                 </div>
                 <div className="scene-herbs">
                   {[...Array(3)].map((_, i) => (
@@ -114,11 +152,10 @@ export default function LandingPage() {
         <div className="container">
           <div className="teaser-grid">
             {[
-              { icon: "🌿", label: "What is Kefir?", sub: "Origins, culture & benefits", href: "#what-is-kefir" },
-              { icon: "🫙", label: "Equipment Needed", sub: "Six things to get started", href: "#equipment" },
-              { icon: "📋", label: "Care Guide", sub: "Step-by-step fermentation", href: "#care-guide" },
-              { icon: "❄️", label: "Storage & Serving", sub: "How to keep & enjoy it", href: "#storage" },
-            ].slice(0,3).map(t => (
+              { icon: "🌿", label: "What is Kefir?",    sub: "Origins, culture & benefits",    href: "#what-is-kefir" },
+              { icon: "🫙", label: "Equipment Needed",  sub: "Six things to get started",      href: "#equipment" },
+              { icon: "📋", label: "Care Guide",        sub: "Step-by-step fermentation",      href: "#care-guide" },
+            ].map(t => (
               <a key={t.label} href={t.href} className="teaser-item">
                 <span className="teaser-icon">{t.icon}</span>
                 <div>
@@ -139,18 +176,16 @@ export default function LandingPage() {
             <div>
               <p className="section-eyebrow">What is kefir</p>
               <h2 className="section-title">A drink that's been <em>alive for centuries.</em></h2>
-              <p className="section-lead">
-                Kefir originated in the Caucasus mountains thousands of years ago. It's made by adding kefir grains — a living symbiotic colony of bacteria and yeast — to milk, then letting them ferment at room temperature.
-              </p>
+              <p className="section-lead">Kefir originated in the Caucasus mountains thousands of years ago. It's made by adding kefir grains — a living symbiotic colony of bacteria and yeast — to milk, then letting them ferment at room temperature.</p>
               <p style={{ fontSize: "0.9rem", color: "var(--stone)", lineHeight: 1.8, marginTop: "1rem", fontWeight: 300 }}>
-                The result is a tangy, lightly effervescent drink packed with probiotics. Unlike yogurt, kefir contains a far wider variety of beneficial microorganisms, and the grains can be reused indefinitely — making it one of the most sustainable fermented foods you can make at home.
+                The result is a tangy, lightly effervescent drink packed with probiotics. Unlike yogurt, kefir contains a far wider variety of beneficial microorganisms, and the grains can be reused indefinitely.
               </p>
             </div>
             <div className="what-visual">
               {[
                 { icon: "🦠", text: "<strong>30+ probiotic strains</strong> — far more diverse than yogurt or store-bought kefir" },
-                { icon: "⚡", text: "<strong>High in B vitamins</strong> — B12, riboflavin, and folate naturally produced during fermentation" },
-                { icon: "🧬", text: "<strong>Lactose-reduced</strong> — fermentation breaks down most of the lactose, easier to digest" },
+                { icon: "⚡", text: "<strong>High in B vitamins</strong> — B12, riboflavin, and folate produced during fermentation" },
+                { icon: "🧬", text: "<strong>Lactose-reduced</strong> — fermentation breaks down most lactose, easier to digest" },
                 { icon: "🔄", text: "<strong>Self-sustaining</strong> — grains grow and multiply, giving you a lifelong culture" },
               ].map((b, i) => (
                 <div key={i} className="benefit-pill">
@@ -167,7 +202,7 @@ export default function LandingPage() {
       <section className="section section-alt" id="equipment">
         <div className="container">
           <p className="section-eyebrow">What you need</p>
-          <h2 className="section-title">Simple tools,<br /><em>timeless results.</em></h2>
+          <h2 className="section-title">Simple tools, <em>timeless results.</em></h2>
           <p className="section-lead">You probably own most of this already. The only thing you truly need to source are the grains themselves.</p>
           <div className="equip-grid">
             {equipment.map((e, i) => (
@@ -217,11 +252,11 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* STORAGE & CONSUME */}
+      {/* STORAGE */}
       <section className="section section-alt" id="storage">
         <div className="container">
           <p className="section-eyebrow">Storage & serving</p>
-          <h2 className="section-title">Made with care,<br /><em>enjoyed slowly.</em></h2>
+          <h2 className="section-title">Made with care, <em>enjoyed slowly.</em></h2>
           <p className="section-lead">Finished kefir keeps beautifully, and your grains — properly rested — will last a lifetime.</p>
           <div className="storage-grid">
             {storageCards.map(c => (
@@ -243,7 +278,7 @@ export default function LandingPage() {
           <p className="cta-sub">It takes ten minutes to set up your first batch. Your grains will do the rest.</p>
           <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a href="#what-is-kefir" className="btn btn-white btn-lg">Read the Guide</a>
-            <a href="#equipment" className="btn btn-outline btn-lg" style={{ color: "rgba(255,255,255,0.7)", borderColor: "rgba(255,255,255,0.3)" }}>See Equipment</a>
+            <a href="#equipment"     className="btn btn-ghost-white btn-lg">See Equipment</a>
           </div>
         </div>
       </section>
@@ -253,7 +288,10 @@ export default function LandingPage() {
         <div className="container">
           <div className="footer-inner">
             <div>
-              <div className="footer-logo">Fermented<em>WithLove</em></div>
+              <div className="footer-logo">
+                <MilkGlass size={48} color="#4A7C59" />
+                Fermented<em>WithLove</em>
+              </div>
               <p className="footer-tagline">A small guide to making kefir, sourdough & ferments at home.</p>
             </div>
             <div className="footer-links">

@@ -67,6 +67,9 @@ a {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--ink);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .nav-logo em {
@@ -772,6 +775,9 @@ a {
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .footer-logo em {
