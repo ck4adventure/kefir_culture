@@ -16,10 +16,6 @@ export default function KefirStoragePage() {
         <Breadcrumbs items={breadcrumbs} />
 
         <article className="container-prose">
-          <h1 className="section-title">Storing & Serving Kefir</h1>
-          <p className="section-lead">
-            Finished kefir keeps beautifully in the refrigerator, and your grains—properly rested—will last a lifetime.
-          </p>
 
           <section className="my-8" aria-labelledby="storage-finished">
             <h2 className="section-title" id="storage-finished">Storing Finished Kefir</h2>
