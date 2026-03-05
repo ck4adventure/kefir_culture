@@ -15,7 +15,7 @@ export default function LandingPage() {
   return (
     <>
       {/* HERO */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="container">
           <div className="hero-grid">
             <div>
@@ -29,7 +29,7 @@ export default function LandingPage() {
               </p>
               <div className="hero-actions">
                 <Link href="/kefir" className="btn btn-moss btn-lg">Learn the Basics</Link>
-                <Link href="/kefir" className="btn btn-outline btn-lg">Care Guide →</Link>
+                <Link href="/kefir/care" className="btn btn-outline btn-lg">Care Guide →</Link>
               </div>
               <div className="hero-stats">
                 {[
@@ -46,7 +46,7 @@ export default function LandingPage() {
             </div>
 
             {/* Hero illustration — swap contents for <Image> */}
-            <div className="hero-img">
+            {/* <div className="hero-img">
               <div className="kefir-scene">
                 <div className="kefir-lid" />
                 <div className="kefir-jar">
@@ -75,14 +75,14 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */} 
 
       {/* TEASER STRIP */}
-      <div className="teaser-strip">
+      {/* <div className="teaser-strip">
         <div className="container">
           <div className="teaser-grid">
             {[
-              { icon: "🌿", label: "Kefir Guide",    sub: "Complete fermentation guide",    href: "/kefir" },
+              { icon: "🌿", label: "Kefir",    sub: "Complete fermentation guide",    href: "/kefir" },
               { icon: "🍞", label: "Sourdough",      sub: "Coming soon",      href: "#" },
               { icon: "🍎", label: "Ciders & More",  sub: "Coming soon",      href: "#" },
             ].map(t => (
@@ -97,13 +97,13 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* EXPLORE GUIDES */}
       <section className="section">
         <div className="container">
-          <div style={{ marginBottom: "3rem", textAlign: "center" }}>
-            <h2 className="section-title">Explore Our Ferments</h2>
+          <div style={{ marginBottom: "3rem", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <h2 className="section-title">Fun With Fermentation</h2>
             <p className="section-lead">Choose a guide to learn about making, caring for, and enjoying fermented foods at home.</p>
           </div>
 
@@ -122,7 +122,7 @@ export default function LandingPage() {
               <span className="guide-card-link">Coming Soon</span>
             </Link>
 
-            <Link href="/ciders" className="guide-card">
+            <Link href="/drinks" className="guide-card">
               <div className="guide-card-icon">🍎</div>
               <h3 className="guide-card-title">Cider & Fermented Drinks</h3>
               <p className="guide-card-desc">Ferment your own cider, kombucha, and other delicious beverages at home.</p>
@@ -145,9 +145,9 @@ export default function LandingPage() {
             </div>
             <div className="footer-links">
               {[
-                { label: "Kefir Guide", href: "/kefir" },
+                { label: "Kefir", href: "/kefir" },
                 { label: "Sourdough", href: "/sourdough" },
-                { label: "Fermented Drinks", href: "/ciders" },
+                { label: "Cider and Wines", href: "/drinks" },
               ].map(l => (
                 <Link key={l.label} href={l.href} className="footer-link">{l.label}</Link>
               ))}

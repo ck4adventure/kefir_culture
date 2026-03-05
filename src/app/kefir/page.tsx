@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function KefirHub() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'Kefir Guide', href: '/kefir' },
+    { label: 'Kefir', href: '/kefir' },
   ];
 
   return (
@@ -15,7 +15,7 @@ export default function KefirHub() {
         <Breadcrumbs items={breadcrumbs} />
 
         <div className="mb-12">
-          <h1 className="section-title">Complete Kefir Guide</h1>
+          <h1 className="section-title">All things Kefir</h1>
           <p className="section-lead">
             Learn everything you need to make and maintain milk kefir at home.
           </p>
@@ -24,7 +24,7 @@ export default function KefirHub() {
         {/* Guide sections grid */}
         <div className="guide-sections-grid">
           <Link href="/kefir/overview" className="guide-card">
-            <div className="guide-card-icon">🌿</div>
+            <div className="guide-card-icon">🥛</div>
             <h2 className="guide-card-title">What is Kefir?</h2>
             <p className="guide-card-desc">
               Discover the history, science, and benefits of this ancient fermented probiotic drink.
@@ -33,7 +33,7 @@ export default function KefirHub() {
           </Link>
 
           <Link href="/kefir/care" className="guide-card">
-            <div className="guide-card-icon">💧</div>
+            <div className="guide-card-icon">💜</div>
             <h2 className="guide-card-title">Care Guide</h2>
             <p className="guide-card-desc">
               Daily feeding instructions, troubleshooting, and tips for healthy, thriving grains.
@@ -42,7 +42,7 @@ export default function KefirHub() {
           </Link>
 
           <Link href="/kefir/storage" className="guide-card">
-            <div className="guide-card-icon">❄️</div>
+            <div className="guide-card-icon">🫙</div>
             <h2 className="guide-card-title">Storage & Serving</h2>
             <p className="guide-card-desc">
               How to store finished kefir, serve it, and keep your grains during breaks.

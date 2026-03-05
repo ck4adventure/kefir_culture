@@ -6,7 +6,7 @@ import { NavButtons } from '@/components/NavButtons';
 export default function KefirCarePage() {
   const breadcrumbs = [
     { label: 'Home', href: '/' },
-    { label: 'Kefir Guide', href: '/kefir' },
+    { label: 'Kefir', href: '/kefir' },
     { label: 'Care Guide', href: '/kefir/care' },
   ];
 

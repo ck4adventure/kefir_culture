@@ -21,7 +21,7 @@ export default function CidersPage() {
               <p style={{ fontSize: "1.1rem", color: "var(--stone)", marginTop: "2rem" }}>
                 We're currently working on our guide to fermented drinks. Check back soon!
               </p>
-              <div className="hero-actions" style={{ marginTop: "2rem" }}>
+              <div className="hero-actions" style={{ marginTop: "2rem", justifyContent: "center"}}>
                 <a href="/" className="btn btn-moss btn-lg">← Return to Home</a>
               </div>
             </div>
@@ -41,7 +41,8 @@ export default function CidersPage() {
             </div>
             <div className="footer-links">
               <a href="/" className="footer-link">Home</a>
-              <a href="/kefir" className="footer-link">Kefir Guide</a>
+              <a href="/kefir" className="footer-link">Kefir</a>
+              <a href="/sourdough" className="footer-link">Sourdough</a>
             </div>
           </div>
           <div className="footer-copy">© 2026 fermentedwithlove.com — made with live cultures</div>

@@ -6,9 +6,9 @@ import { MilkGlass } from '../../design/logo/page';
 
 export function Navigation() {
   const navItems = [
-    { label: 'Kefir Guide', href: '/kefir' },
+    { label: 'Kefir', href: '/kefir' },
     { label: 'Sourdough', href: '/sourdough' },
-    { label: 'Fermented Drinks', href: '/ciders' },
+    { label: 'Cider and Wines', href: '/drinks' },
   ];
 
   return (
@@ -25,9 +25,9 @@ export function Navigation() {
             </li>
           ))}
         </ul>
-        <Link href="/kefir" className="btn btn-moss btn-sm">
+        {/* <Link href="/kefir" className="btn btn-moss btn-sm">
           Get Started
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );
