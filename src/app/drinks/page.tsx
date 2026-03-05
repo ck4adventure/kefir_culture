@@ -28,26 +28,6 @@ export default function CidersPage() {
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-inner">
-            <div>
-              <div className="footer-logo">
-                🍎 Fermented<em>WithLove</em>
-              </div>
-              <p className="footer-tagline">A small guide to making kefir, sourdough & ferments at home.</p>
-            </div>
-            <div className="footer-links">
-              <a href="/" className="footer-link">Home</a>
-              <a href="/kefir" className="footer-link">Kefir</a>
-              <a href="/sourdough" className="footer-link">Sourdough</a>
-            </div>
-          </div>
-          <div className="footer-copy">© 2026 fermentedwithlove.com — made with live cultures</div>
-        </div>
-      </footer>
     </>
   );
 }

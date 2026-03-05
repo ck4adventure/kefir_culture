@@ -863,6 +863,7 @@ a {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 1px solid var(--chalk);
+	padding-bottom: 2rem;
 }
 
 .nav-button {
@@ -906,6 +907,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
+	margin-top: 1rem;
 }
 
 .guide-card {
